@@ -37,8 +37,8 @@ body {
     align-items: center;
     justify-content: end;
     font-size: 200px;
-    height: 100%;
-    width: 100%;
+    min-height: 250px;
+    margin-right: 5px;
 }
 
 .buttons {
