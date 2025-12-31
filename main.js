@@ -29,7 +29,12 @@ function calculate() {
         return;
     }
 
-    const secondNum = Number(inputs.pop());
+    let popped = inputs.pop();
+    if (Array.isArray(popped)) {
+        popped = popped.join('');
+    }
+
+    const secondNum = Number(popped);
     const operator = inputs.pop();
     const firstNum = Number(inputs.pop());
 
@@ -38,7 +43,7 @@ function calculate() {
         answer = Number.parseInt(answer);
     }
     inputs.splice(0);
-    inputs.push(answer);
+    inputs.push([answer]);
 
     output.textContent = answer;
 }
